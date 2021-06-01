@@ -2,8 +2,8 @@
 .DS_*
 frontend/*.log
 frontend/logs
-**/*.backup.*
-**/*.back.*
+frontend/**/*.backup.*
+frontend/**/*.back.*
 
 frontend/package-lock.json
 
