@@ -1,19 +1,19 @@
 ### react ###
 .DS_*
-frontend/*.log
-frontend/logs
-frontend/**/*.backup.*
-frontend/**/*.back.*
+front/*.log
+front/logs
+front/**/*.backup.*
+front/**/*.back.*
 
-frontend/package-lock.json
+front/package-lock.json
 
-frontend/node_modules
-frontend/bower_components
+front/node_modules
+front/bower_components
 
 *.sublime*
 
-frontend/psd
-frontend/thumb
-frontend/sketch
+front/psd
+front/thumb
+front/sketch
 
 # End of https://www.toptal.com/developers/gitignore/api/react
