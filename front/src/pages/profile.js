@@ -10,12 +10,16 @@ import {
 
 class Profile extends Component {
     state = {
-        selectedFile: null
+        selectedFile: null,
+        selectedFileToShow: null
     }
 
     fileSelectedHandler = (event) => {
-        console.log(event);
-        console.log('hello handler')
+        //console.log(event.target.files[0]);
+        console.log(URL.createObjectURL(event.target.files[0]))
+        this.setState({
+            selectedFileToShow: URL.createObjectURL(event.target.files[0])
+        })
         //console.log(e.target);
         //console.log(e.target[0]);
         //this.setState({
@@ -36,6 +40,12 @@ class Profile extends Component {
     render(){
         return (
             <>
+            {this.state.selectedFileToShow ? (
+        <img src={this.state.selectedFileToShow} />
+      ) : (
+        <p>select file</p>
+      )}
+
                 Protected Profile!
                 <div>
                     <h1>logged in</h1>

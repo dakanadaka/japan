@@ -9,12 +9,14 @@ import {
   Redirect,
   useHistory
 } from "react-router-dom";
+import PrivateRoute from './auth/privateRoutes'
 import About from './pages/about'
 import Register from './pages/register'
 import Login from './pages/login'
 import Profile from './pages/profile'
 import Home from './pages/home'
 import Header from './template/header'
+
 
 
 
@@ -124,11 +126,11 @@ axios.post('http://localhost/internship/api/update_user.php', formData, headers)
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
+          <PrivateRoute path="/profile" component={Profile}>
+            
+          </PrivateRoute>
           <Route path="/about">
             <About />
-          </Route>
-          <Route path="/profile">
-            <Profile />
           </Route>
           <Route path="/register">
             <Register />
